@@ -1,0 +1,13 @@
+<IfModule mod_rewrite.c>
+    #Activar rwrite
+    RewriteEngine on
+    ErrorDocument 404 http://localhost:8080/proyecto-mvc/error/index
+
+    #Evaluamos si es un directorio o es un fichero
+    #% : que no cargue un archivo cualquiera o carpeta cualquiera
+    RewriteCond %{SCRIPT_FILENAME} !-d
+    RewriteCond %{SCRIPT_FILENAME} !-f
+
+    #(.*) = $1 / (.*) = $2
+    RewriteRule ^(.*)/(.*) index.php?controller=$1&action=$2
+</IfModule>
