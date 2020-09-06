@@ -1,6 +1,6 @@
             <!--CONTENIDO CENTRAL-->
            
-                <div  id="title-product">
+            <div  id="title-product">
                     <h1>Productos</h1>
                 </div>
                 <div id="products">
@@ -16,7 +16,7 @@
                         <p><?=$prod->precio?> S/.</p>
                         </a>
 
-                        <a href="#" class="button">Comprar</a>
+                        <a href="<?=base_url?>carrito/add&id=<?=$prod->id?>" class="button">Comprar</a>
                     </div>
                     <?php endwhile; ?>
                     

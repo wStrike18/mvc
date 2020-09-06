@@ -57,7 +57,7 @@
     <?php if(isset($pro) && is_object($pro) && (!empty($pro->imagen)) && $pro->imagen != 'product-default.jpg'): ?>
             <img src="<?=base_url.'uploads/images/'.$pro->imagen?>" class="thumb" alt="">
     <?php else: ?>
-        <img src="<?=base_url.'assets/img/default/'.$pro->imagen?>" class="thumb" alt="">
+        <img src="<?=base_url.'assets/img/default/product-default.jpg'?>" class="thumb" alt="">
     <?php endif; ?>
     <input type="file" name="fileToUpload" id="fileToUpload">
     
